@@ -4,8 +4,9 @@
   "description": "Repository showing Cypress tests",
   "main": "index.js",
   "scripts": {
-    "test": "docker run -it -e CYPRESS_baseUrl=$CYPRESS_baseUrl -e CYPRESS_updateSnapshots=$CYPRESS_updateSnapshots --ipc=host -v $PWD:/e2e -w /e2e cypress/included:4.11.0",
-    "test:ci": "npm run test -- run --record --key $CYPRESS_recordKey"
+    "prepare-test-data": "cypress run --env updateSnapshots=true",
+    "test": "cypress run",
+    "test-gui": "cypress open"
   },
   "keywords": [
     "cypress",
