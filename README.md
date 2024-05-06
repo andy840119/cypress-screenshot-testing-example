@@ -7,3 +7,10 @@ Example repository showing how to use Cypress and Cypress Image Snapshot.
 More details in the [step by step post](https://bit.ly/30ncCYj) in [my blog](https://leonardofaria.net). 
 
 ![Screenshot](https://leonardofaria.net/wp-content/uploads/2020/08/cypress-sample-website.png)
+
+## Ho to run this project
+1. Clone this repository
+2. Run `npm install`
+3. Modify the `baseUrl` in `cypress.config.js` to match your local environment
+4. Run `npm run prepare-test-data` to prepare the actual test data
+5. Run `npm run test` to run the test.

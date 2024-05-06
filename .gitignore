@@ -1,0 +1,6 @@
+# ignore the node_module and jetbrain project files.
+node_modules/*
+.idea/*
+
+# ignore the screenshot testing files.
+*.snap.png
