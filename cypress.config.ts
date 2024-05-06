@@ -13,4 +13,5 @@ module.exports = defineConfig({
     baseUrl: 'http://127.0.0.1:7001/',
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
   },
+  screenshotOnRunFailure: false,
 })
