@@ -1,4 +1,5 @@
-const { defineConfig } = require('cypress')
+import { defineConfig } from 'cypress'
+import { addMatchImageSnapshotPlugin } from "@simonsmith/cypress-image-snapshot/plugin";
 
 module.exports = defineConfig({
   video: false,
@@ -6,8 +7,8 @@ module.exports = defineConfig({
   e2e: {
     // We've imported your old cypress plugins here.
     // You may want to clean this up later by importing these.
-    setupNodeEvents(on, config) {
-      return require('./cypress/plugins/index.js')(on, config)
+    setupNodeEvents(on) {
+      addMatchImageSnapshotPlugin(on)
     },
     baseUrl: 'http://127.0.0.1:7001/',
     specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
